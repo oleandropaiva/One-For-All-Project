@@ -9,8 +9,8 @@
   "tabela_que_contem_seguindo_artistas": "nome-da-tabela-que-armazena-a-coluna",
   "coluna_artista": "artista_name",
   "tabela_que_contem_artista": "artistas_table",
-  "coluna_album": "nome-da-coluna",
-  "tabela_que_contem_album": "nome-da-tabela-que-armazena-a-coluna",
+  "coluna_album": "album_name",
+  "tabela_que_contem_album": "album_table",
   "coluna_cancoes": "nome-da-coluna",
   "tabela_que_contem_cancoes": "nome-da-tabela-que-armazena-a-coluna"
 }
