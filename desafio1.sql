@@ -71,3 +71,34 @@ VALUES
 (9, "Angelina", 42, "2018-04-29", 2),
 (10, "Paul", 46, "2017-01-17", 2);
 
+CREATE TABLE SpotifyClone.seguindo_artistas(
+    usuario_id INT, FOREIGN KEY(usuario_id) REFERENCES usuario_table(usuario_id),
+    artistas_seguidos INT, FOREIGN KEY(artistas_seguidos) REFERENCES artistas_table(artista_id),
+    CONSTRAINT PRIMARY KEY(usuario_id, artistas_seguidos)
+) engine = InnoDB;
+
+INSERT INTO SpotifyClone.seguindo_artistas (usuario_id, artistas_seguidos)
+VALUES
+(1,1),
+(1,5),
+(1,3),
+(2,1),
+(2,3),
+(3,2),
+(3,1),
+(4,5),
+(5,4),
+(5,6),
+(6,6),
+(6,1),
+(6,3),
+(7,2),
+(7,4),
+(8,1),
+(8,4),
+(9,6),
+(9,5),
+(9,3),
+(10,2),
+(10,6);
+
