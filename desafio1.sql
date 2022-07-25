@@ -36,3 +36,38 @@ VALUES
   ('Cabinet of fools', 4, 2012),
   ('No guarantees', 4, 2015),
   ('Apparatus', 6, 2015);
+
+  CREATE TABLE SpotifyClone.plano_table(
+    plano VARCHAR(100) NOT NULL,
+    valor_plano DECIMAL(3,2) NOT NULL,
+    plano_id INT PRIMARY KEY AUTO_INCREMENT
+) engine = InnoDB;
+
+INSERT INTO SpotifyClone.plano_table (plano, valor_plano, plano_id)
+VALUES 
+("gratuito", 0, 1),
+("familiar", 7.99, 2),
+("pessoal", 6.99, 3),
+("universitário", 5.99, 4);
+
+CREATE TABLE SpotifyClone.usuario_table(
+    usuario_id INT PRIMARY KEY AUTO_INCREMENT,
+    usuario VARCHAR(100) NOT NULL,
+    idade INT,
+    data_assinatura DATE,
+    plano_id INT, FOREIGN KEY(plano_id) REFERENCES plano_table(plano_id)
+) engine = InnoDB;
+
+INSERT INTO SpotifyClone.usuario_table (usuario_id, usuario, idade, data_assinatura, plano_id)
+VALUES
+(1, "Thati", 23, "2019-10-20", 1),
+(2, "Cintia", 35, "2017-12-30", 2),
+(3, "Bill", 20, "2019-06-05", 4),
+(4, "Roger", 45, "2020-05-13", 3),
+(5, "Norman", 58, "2017-02-17", 3),
+(6, "Patrick", 33, "2017-01-06", 2),
+(7, "Vivian", 26, "2018-01-05", 4),
+(8, "Carol", 19, "2018-02-14", 4),
+(9, "Angelina", 42, "2018-04-29", 2),
+(10, "Paul", 46, "2017-01-17", 2);
+
