@@ -102,3 +102,52 @@ VALUES
 (10,2),
 (10,6);
 
+CREATE TABLE SpotifyClone.cancoes_table(
+    cancoes VARCHAR(100) NOT NULL,
+    duracao_segundos INT NOT NULL,
+    album_id INT, FOREIGN KEY(album_id) REFERENCES album_table(album_id),
+    cancao_id INT PRIMARY KEY AUTO_INCREMENT
+) engine = InnoDB;
+
+INSERT INTO SpotifyClone.cancoes_table (cancoes, duracao_segundos, album_id, cancao_id)
+VALUES
+("Soul For Us", 200, 1, 1),
+("Reflections Of Magic",163, 1, 2),
+("Dance With Her Own",116,1,3),
+("Troubles Of My Inner Fire", 203, 2, 4),
+("Time Fireworks", 152, 2, 5),
+("Magic Circus", 105, 3, 6),
+("Honey, So Do I", 207, 3, 7),
+("Sweetie, Let's Go Wild", 139, 3, 8),
+("She Knows", 244, 3, 9),
+("Fantasy For Me", 100, 4, 10),
+("Celebration Of More", 146, 4, 11),
+("Rock His Everything", 223, 4, 12),
+("Home Forever", 231, 4, 13),
+("Diamond Power", 241, 4, 14),
+("Let's Be Silly", 132, 4, 15),
+("Thang Of Thunder", 240, 5, 16),
+("Words Of Her Life", 185, 5, 17),
+("Without My Streets", 176, 5, 18),
+("Need Of The Evening", 190, 6, 19),
+("History Of My Roses", 222, 6, 20),
+("Without My Love", 111, 6, 21),
+("Walking And Game", 123, 6, 22),
+("Young And Father", 197, 6, 23),
+("Finding My Traditions", 179, 7, 24),
+("Walking And Man", 229, 7, 25),
+("Hard And Time", 135, 7, 26),
+("Honey, I'm A Lone Wolf", 150, 7, 27),
+("She Thinks I Won't Stay Tonight", 166, 8, 28),
+( "He Heard You're Bad For Me", 154, 8, 29),
+("He Hopes We Can't Stay", 210, 8, 30),
+("I Know I Know", 117, 8, 31),
+("He's Walking Away", 159, 9, 32),
+("He's Trouble", 138, 9, 33),
+("I Heard I Want To Bo Alone", 120, 9, 34),
+("I Ride Alone", 151, 9, 35),
+("'Honey", 79, 10, 36),
+("You Cheated On Me", 95, 10, 37),
+("Wouldn't It Be Nice", 213, 10, 38),
+("Baby", 136, 10, 39),
+("You Make Me Feel So..", 83, 10, 40);

@@ -11,6 +11,6 @@
   "tabela_que_contem_artista": "artistas_table",
   "coluna_album": "album_name",
   "tabela_que_contem_album": "album_table",
-  "coluna_cancoes": "nome-da-coluna",
-  "tabela_que_contem_cancoes": "nome-da-tabela-que-armazena-a-coluna"
+  "coluna_cancoes": "cancoes",
+  "tabela_que_contem_cancoes": "cancoes_table"
 }
